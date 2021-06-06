@@ -1,0 +1,28 @@
+<%- include('partials/_header'); -%>
+
+<h1>Nueva tarea</h1>
+
+<div class="card">
+    <div class="card-body">
+        <form action="/add" method="POST">
+            <div class="form-group mt-3">
+                <input type="text" name="Tarea" placeholder="Tarea" class="form-control">
+            </div>
+            <div class="form-group mt-3">
+                <input type="date" name="Fecha" placeholder="Fecha" class="form-control">
+            </div>
+            <div class="form-group mt-3">
+                <textarea type="text" name="Descripcion" placeholder="Descripción" class="form-control"
+                    rows="3"></textarea>
+            </div>
+            <div class="form-group mt-3">
+                <input type="checkbox" name="Estatus" value="Completada" class="done-checkbox"> Completada</input>
+                <input type="checkbox" name="Estatus" value="No Completada" class="done-checkbox"> No Completada</input>
+            </div>
+            <br>
+            <button type="submit" class="btn btn-primary">Guardar tarea</button>
+        </form>
+    </div>
+</div>
+
+<%- include('partials/_footer'); -%>
